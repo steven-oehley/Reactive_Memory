@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+
+import cardImages from "./data/cardData";
+import { shuffleCards } from "./utilities/cardUtils";
 
 function App() {
+  const [cards, setCards] = useState([]);
+  const [turns, setTurns] = useState(0);
+
+  console.log(cards);
+  console.log(turns);
+
+  function newGame() {
+    setCards(shuffleCards(cardImages));
+    setTurns(0);
+    console.log(cards);
+    console.log(turns);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Reactive Memory ⚛︎</h1>
+      <button onClick={newGame}>New Game</button>
     </div>
   );
 }
