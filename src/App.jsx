@@ -32,7 +32,7 @@ function App() {
   }
 
   useEffect(() => {
-    shuffleCards(cardImages);
+    setCards(shuffleCards(cardImages));
   }, []);
 
   useEffect(() => {
