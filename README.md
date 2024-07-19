@@ -8,8 +8,7 @@ Reactive Memory is a simple, yet engaging memory card game built with React. The
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Components Overview](#components-overview)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Installation
 
